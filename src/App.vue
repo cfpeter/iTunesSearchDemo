@@ -15,20 +15,20 @@
     </v-container>
   </v-content>
  
+      <appFooter />
   </v-app>
 </template>
 
 <script> 
 import itunesSearch from './components/itunes-search.vue';
+import appFooter from './components/footer.vue'; 
 
 
 export default {
   name: 'App',
   components: {
     itunesSearch,
-  },
-  data: () => ({
-    //
-  }),
+    appFooter
+  }
 };
 </script>
