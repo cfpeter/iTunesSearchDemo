@@ -46,8 +46,7 @@ export default new Vuex.Store({
 
     async searchItunes({commit}, searchData){
       try { 
-        const {data} = await itunesService.searchItunes(searchData) 
-        console.log(data)
+        const {data} = await itunesService.searchItunes(searchData)  
         commit('SET_SEARCH_ITUNES', data)
         return data
       } 
