@@ -6,7 +6,8 @@
             <v-card color="white" :loading="loading" >
                 <v-progress-linear v-show="loading"></v-progress-linear>
                 <v-card-title class="text-center justify-center py-6">
-                <h1 class="font-weight-bold display-2 red--text">iTunes Search</h1>
+                <h1 class="font-weight-bold display-2 red--text d-none d-sm-flex">iTunes Search</h1>
+                <h1 class="font-weight-bold title red--text d-xl-none d-lg-none d-sm-none d-md-none" >iTunes Search</h1>
                 </v-card-title> 
                 <v-container fluid>
                 <v-row>  
@@ -305,8 +306,7 @@ export default {
 
             })
             .catch(err => {
-                alert('error')
-                console.log(err);
+                alert('We could not load the data. Please try again later.')
                 this.loading = !this.loading
             })
         },
